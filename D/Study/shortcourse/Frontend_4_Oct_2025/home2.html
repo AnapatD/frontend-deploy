@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p onclick="add" id="demo">Click on this text!</p>
+	<button id="add">number</button>
+	<p onclick="click" id="num"></p>
+</body>
+	<script>
+		document.getElementById("add").addEventListener("click", click);
+		let x = 0;
+
+		function click() {
+			// document.getElementById("demo").innerHTML = 2;
+			x += 1;
+			document.getElementById("num").innerHTML = x;
+			console.log(document.getElementById("num").innerHTML);
+			if (document.getElementById("num").innerHTML % 2 == 0)
+				document.getElementById("num").style.color = "red";
+			else
+			document.getElementById("num").style.color = "blue";
+			if (x == 10)
+				alert("You pressed 10 times!");
+		}
+	</script>
+</html>
